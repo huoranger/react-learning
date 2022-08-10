@@ -23,15 +23,24 @@ class ClassComponent extends React.Component {
       }
     )
   }
+
+  // testThis = () => {
+  //   console.log("this",this);
+  // }
+  testThis() {
+    console.log("this",this);
+  }
   
   render() {
     return (
       <>
         <div>i am a div class component</div>
         <button onClick={this.addOne}>按钮:{this.state.counter}</button>
+        <button onClick={this.testThis}>测试this</button>
+
         <ul>
           {
-            this.state.names.map(({name, index}) => (
+            this.state.names.map((name, index) => (
               <li key={index}>{name}</li>
             ))
           }
